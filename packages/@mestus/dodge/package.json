@@ -1,0 +1,17 @@
+{
+  "name": "@mestus/dodge",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": "https://github.com/mestuss/easter-egg-games/",
+  "author": "mestuss",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mestuss/easter-egg-games/issues"
+  },
+  "scripts": {
+    "build": "rm -rf ./dist && swc src --config-file .swcrc -d dist",
+    "postbuild": "tsc -p tsconfig.build.json",
+    "prepare": "yarn build"
+  }
+}

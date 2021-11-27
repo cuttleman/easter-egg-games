@@ -1,0 +1,13 @@
+{
+  "name": "scripts",
+  "version": "0.0.1",
+  "private": true,
+  "bin": {
+    "localcmd": "scripts.js"
+  },
+  "peerDependencies": {
+    "chalk": "^4.1.2",
+    "co": "^4.6.0",
+    "inquirer": "^8.2.0"
+  }
+}
