@@ -9,6 +9,6 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
-    "@mestus/dodge": "^0.0.1"
+    "@mastus/dodge": "^0.0.1"
   }
 }

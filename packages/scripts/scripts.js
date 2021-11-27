@@ -10,10 +10,10 @@ const chalk = require("chalk");
 const scripts = {
   clean: "lerna clean",
   bootstrap: "lerna bootstrap --hoist",
-  build: "lerna run build --scope @mestus/",
+  build: "lerna run build --scope @mastus/",
   publish: "lerna publish",
-  "Remove to tester": "npm uninstall -w ./packages/tester @mestus/",
-  "Add to tester": "lerna add --scope tester @mestus/",
+  "Remove to tester": "npm uninstall -w ./packages/tester @mastus/",
+  "Add to tester": "lerna add --scope tester @mastus/",
   "Start tester": "lerna run --scope tester start",
 };
 
@@ -23,7 +23,7 @@ let confirm = "yes";
 const scriptKeys = Object.keys(scripts);
 
 co(function* () {
-  const gameTarget = fs.readdirSync(path.join("packages", "@mestus"));
+  const gameTarget = fs.readdirSync(path.join("packages", "@mastus"));
 
   // Init question
   const { command } = yield inquirer.prompt([
@@ -72,7 +72,7 @@ co(function* () {
   if (confirm === "yes") {
     const [cmd, ...args] = scripts[command].split(" ");
     const updatedScript = args.map((arg) =>
-      arg.includes("@mestus/") ? `${arg}${selectedTarget}` : arg
+      arg.includes("@mastus/") ? `${arg}${selectedTarget}` : arg
     );
 
     spawn(cmd, updatedScript, { stdio: "inherit" });

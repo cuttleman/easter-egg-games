@@ -1,5 +1,5 @@
 import React from "react";
-import { Dodge } from "@mestus/dodge";
+import { Dodge } from "@mastus/dodge";
 
 function App() {
   return (
